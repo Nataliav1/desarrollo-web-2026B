@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADEPALMA - Precios</title>
+</head>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #d5d8d7;
+            border-radius: 8px;
+            box-shadow: 0 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: rgb(17, 30, 25);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: rgb(22, 35, 31);
+        }
+
+        input[type=number] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .results {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: antiquewhite;
+            border-left: 5px solid #2ecc71;
+            border-radius: 4px;
+        }
+
+        .results p {
+            margin: 8px 0;
+            font-size: 1.05em;
+            color: blueviolet;
+        }
+
+        .results span {
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .error {
+            color: #e74c3c !important;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <h1>Precios de la Palma</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Precio de la tonelada por semana</h2>
+            <table border="1">
+                <caption>Boletín de precios de referencia para fruto de palma de aceite</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Semana</th>
+                        <th scope="col">Precio Mínimo</th>
+                        <th scope="col">Precio Máximo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Semana 1</th>
+                        <td>$560.000</td>
+                        <td>$570.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Semana 2</th>
+                        <td>$565.000</td>
+                        <td>$573.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Semana 3</th>
+                        <td>$570.000</td>
+                        <td>$578.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Semana 4</th>
+                        <td>$572.500</td>
+                        <td>$582.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <section>
+            <form>
+                <fieldset style="margin-top: 20px;">
+                    <legend>Calcular precio por tonelada</legend>
+
+                    <label for="toneladas">Cantidad de toneladas</label>
+                    <input type="number" id="toneladas" placeholder="Ej: 5">
+
+                    <label for="precio">Semana</label>
+                    <select id="precio">
+                        <option value="">seleccione...</option>
+                        <option value="560000">Semana 1 - $560.000</option>
+                        <option value="565000">Semana 2 - $565.000</option>
+                        <option value="570000">Semana 3 - $570.000</option>
+                        <option value="572500">Semana 4 - $572.500</option>
+                    </select>
+
+                    <button type="button" onclick="calcular()">Calcular</button>
+
+                    <p>Resultado: <b id="resultado"></b></p>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Cultivo de palma de aceite</h2>
+
+            <video controls poster="Archivos-multimedia/cultivo-de-palma.jpg" width="640">
+                <source src="Archivos-multimedia/Palma-de-aceite-biodiversidad.mp4" type="video/mp4">
+                <track src="Archivos-multimedia/subtitulos-es.vtt" kind="captions" srclang="es" label="Español" default>
+                <p>Su navegador no reproduce video. <a href="Archivos-multimedia/Palma-de-aceite-biodiversidad.mp4">Descargue el archivo</a>.</p>
+            </video>
+        </section>
+
+        <section>
+            <h2>Cómo se comercializa la cosecha</h2>
+            <ol>
+                <li>El asociado reporta el volumen cosechado en la báscula de acopio.</li>
+                <li>Se realiza la prueba de calidad e inspección del fruto.</li>
+                <li>Se calcula el valor según el precio base de referencia.</li>
+                <li>Se emite la orden de despacho a la planta extractora.</li>
+                <li>Se realiza el pago al productor.</li>
+            </ol>
+        </section>
+
+        <aside>
+            <h2>Aviso</h2>
+            <p>Los precios son de referencia semanal para los asociados.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>ADEPALMA Casanare - Yopal, Casanare</p>
+    </footer>
+
+
+    <script>
+        function calcular() {
+            let t = document.getElementById("toneladas").value;
+            let p = document.getElementById("precio").value;
+
+            if (t == "" || p == "") {
+                document.getElementById("resultado").innerText = "Faltan datos";
+            } else {
+                let total = t * p;
+                document.getElementById("resultado").innerText = "$" + total;
+            }
+        }
+    </script>
+</body>
+</html>

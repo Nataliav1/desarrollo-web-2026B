@@ -1,0 +1,41 @@
+
+/* ===== Panel de lotes (panel.php) ===== */
+.estado { font-weight: 700; }
+.estado.alto    { color: var(--verde-palma); }
+.estado.medio   { color: var(--verde-medio); }
+.estado.bajo    { color: var(--fruto-oscuro); }
+.estado.critico { color: var(--error); }
+
+.mensaje ul { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+
+header .sesion {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--blanco) !important;
+}
+
+header .sesion strong,
+header .sesion a {
+  color: var(--blanco) !important;
+  white-space: nowrap;
+}
+
+/* ===== Para colocar la palabra ADEPALMA CASANARE con el punto naranja izquierdo con el mismo tamaño en todos los accesos ===== */
+header .marca {
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+header .marca::before {
+  flex: none;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+/* ===== Separar un poco del título (ADEPALMA Casanare) manteniendo el espacio del menú ===== */
+header nav {
+  margin-left: 1.5rem;
+}
+
+header .sesion {
+  margin-left: auto;
+}

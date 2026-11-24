@@ -2,94 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADEPALMA - Contacto</title>
-</head>
-
-
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 500px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #d5d8d7;
-            border-radius: 8px;
-            box-shadow: 0 4px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: rgb(17, 30, 25);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: rgb(22, 35, 31);
-        }
-
-        input[type=number] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #CCC;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .results {
-            margin-top: 25px;
-            padding: 15px;
-            background-color: antiquewhite;
-            border-left: 5px solid #2ecc71;
-            border-radius: 4px;
-        }
-
-        .results p {
-            margin: 8px 0;
-            font-size: 1.05em;
-            color: blueviolet;
-        }
-
-        .results span {
-            font-weight: bold;
-            color: #27ae60;
-        }
-
-        .error {
-            color: #e74c3c !important;
-        }
-    </style>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
 </head>
 
 <body>
     <header>
-        <h1>Contacto</h1>
+        <a class="marca" href="index.html">ADEPALMA Casanare</a>
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="precios.html">Precios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+                <li><a href="formulario.html">Compra</a></li>
+                <li><a href="puntos.html">Puntos</a></li>
+                <li><a href="panel.php">Lotes</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="banner">
+        <h1>Contacto</h1>
+    </div>
+
     <main>
         <section>
             <h2>Ubicación</h2>
-            <p>Calle 6 #20-36, Yopal, Casanare.</p>
-            <p>Correo: contacto@adepalma.co</p>
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Dirección</h3>
+                    <p>Calle 6 #20-36, Yopal, Casanare.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Correo</h3>
+                    <p><a href="mailto:contacto@adepalma.co">contacto@adepalma.co</a></p>
+                </article>
+            </div>
         </section>
+
+        <aside>
+            <h2>¿Quiere hacer una compra?</h2>
+            <p>Diligencie el formulario con sus datos y le responderemos.</p>
+            <a class="boton" href="formulario.html">Ir al formulario</a>
+        </aside>
     </main>
 
     <footer>
-        <p>ADEPALMA Casanare</p>
-        
+        <p>ADEPALMA Casanare - Yopal, Casanare</p>
     </footer>
 </body>
 </html>

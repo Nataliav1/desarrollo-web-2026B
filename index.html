@@ -2,109 +2,67 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADEPALMA Casanare</title>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
 </head>
-
-
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 500px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #d5d8d7;
-            border-radius: 8px;
-            box-shadow: 0 4px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: rgb(17, 30, 25);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: rgb(7, 36, 27);
-        }
-
-        input[type=number] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #CCC;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .results {
-            margin-top: 25px;
-            padding: 15px;
-            background-color: antiquewhite;
-            border-left: 5px solid #2ecc71;
-            border-radius: 4px;
-        }
-
-        .results p {
-            margin: 8px 0;
-            font-size: 1.05em;
-            color: blueviolet;
-        }
-
-        .results span {
-            font-weight: bold;
-            color: #27ae60;
-        }
-
-        .error {
-            color: #e74c3c !important;
-        }
-    </style>
-</head>
-
 
 <body>
     <header>
-        <h1>ADEPALMA Casanare</h1>
+        <a class="marca" href="index.html">ADEPALMA Casanare</a>
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
                 <li><a href="precios.html">Precios</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="formulario.html">Compra</a></li>
+                <li><a href="puntos.html">Puntos</a></li>
+                <li><a href="panel.php">Lotes</a></li>
+
             </ul>
         </nav>
     </header>
+
+    <section class="hero">
+        <div>
+            <h1>Productores de palma de aceite de la Orinoquía</h1>
+            <p>ADEPALMA Casanare: precios de la semana, puntos de recolección y registro de lotes.</p>
+            <a class="boton" href="precios.html">Ver precios de la semana</a>
+        </div>
+        <figure>
+            <img src="../img/palma.png" alt="Tractor cargado con racimos de palma de aceite entre las filas de un cultivo en Casanare">
+            <figcaption>Cultivo de palma.</figcaption>
+        </figure>
+    </section>
 
     <main>
         <section>
             <h2>Quiénes somos</h2>
             <p>Agrupamos a los productores de palma de aceite del departamento de Casanare, impulsando el desarrollo agroindustrial sostenible, la asistencia técnica y el fortalecimiento de la palmicultura en la Orinoquía colombiana.</p>
-            <figure>
-                <img src="Archivos-multimedia/palma.png" alt="Cultivo de palma de aceite en Casanare">
-                <figcaption>Cultivo de palma.</figcaption>
-            </figure>
         </section>
 
         <section>
             <h2>Noticias de precios</h2>
-            <article>
-                <h3>Semana 1</h3>
-                <p>El precio de la tonelada es $570.000.</p>
-            </article>
-            <article>
-                <h3>Semana 2</h3>
-                <p>El precio de la tonelada fue $580.000.</p>
-            </article>
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Semana 1</h3>
+                    <p>El precio de la tonelada estuvo entre <strong>$560.000</strong> y <strong>$570.000</strong>.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Semana 2</h3>
+                    <p>El precio de la tonelada estuvo entre <strong>$565.000</strong> y <strong>$573.000</strong>.</p>
+                </article>
+            </div>
         </section>
 
         <section>
             <h2>Pasos de entrega</h2>
-            <ol>
+            <ol class="pasos">
                 <li>Llevar los racimos de palma de aceite a la báscula.</li>
                 <li>Hacer prueba de calidad.</li>
                 <li>Recibir el pago.</li>
@@ -121,7 +79,7 @@
     </main>
 
     <footer>
-        <p>Yopal, Casanare</p>
+        <p>ADEPALMA Casanare - Yopal, Casanare</p>
     </footer>
 </body>
 </html>

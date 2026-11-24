@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADEPALMA - Puntos de recolección</title>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+</head>
+
+<body>
+    <header>
+        <a class="marca" href="index.html">ADEPALMA Casanare</a>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="formulario.html">Compra</a></li>
+                <li><a href="puntos.html">Puntos</a></li>
+                <li><a href="panel.php">Lotes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h1>Puntos de recolección</h1>
+    </div>
+
+    <main>
+        <section>
+            <h2>Producción de aceite por punto</h2>
+            <p id="resumen"></p>
+
+            <!--
+              Esta es la primera tabla del sitio donde JavaScript escribe en la página.
+              El <tbody> de la tabla llega VACÍO a propósito: las filas las crea app.js.
+              Si abre este archivo en el editor no va a encontrar ni una sola vereda.
+            -->
+            <div class="tabla-scroll">
+                <table>
+                    <caption>Aceite de palma producido por cada punto de recolección cerca de Yopal, en toneladas por mes</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="texto">Punto de recolección</th>
+                            <th scope="col" class="texto">Vereda</th>
+                            <th scope="col">Aceite (t/mes)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-puntos"></tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="2" class="texto">Total</th>
+                            <td id="total-aceite"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <noscript>
+                <p>Para ver la tabla de puntos debe activar JavaScript en su navegador.</p>
+            </noscript>
+        </section>
+
+        <aside>
+            <h2>Aviso</h2>
+            <p>Las cifras son de referencia mensual y pueden cambiar según la cosecha.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>ADEPALMA Casanare - Yopal, Casanare</p>
+    </footer>
+
+    <!-- El script va al final para que la tabla ya exista cuando app.js la busque -->
+    <script src="../js/app.js"></script>
+</body>
+</html>
